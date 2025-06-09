@@ -13,8 +13,8 @@ app.get('/posts', async (req, res) => {
 });
 
 app.post('/posts', async (req, res) => {
-  const { titulo, img, descripcion } = req.body;
-  await addPost(titulo, img, descripcion);
+  const { titulo, url, descripcion } = req.body;
+  await addPost(titulo, url, descripcion);
   res.send("Post agregado con éxito");
 });
 
